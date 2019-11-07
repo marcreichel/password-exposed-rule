@@ -1,4 +1,4 @@
-# password-exposed-rule
+# Laravel Password Exposed Rule
 Laravel Validation rule to check that a password hasn't been exposed
 
 ## Installation
