@@ -1,0 +1,31 @@
+{
+  "name": "marcreichel/password-exposed-rule",
+  "description": "Laravel Validation rule to check that a password hasn't been exposed.",
+  "type": "library",
+  "keywords": [ "laravel", "validation", "password", "security" ],
+  "require": {
+    "illuminate/contracts": "^5.5|^6.0",
+    "guzzlehttp/guzzle": "^6.4"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^3.5|^4.0",
+    "phpunit/phpunit": "^7.0|^8.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marc Reichel",
+      "email": "mail@marcreichel.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MarcReichel\\ExposedPassword\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MarcReichel\\ExposedPassword\\Tests\\": "tests/"
+    }
+  }
+}
