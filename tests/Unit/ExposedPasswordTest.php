@@ -2,15 +2,16 @@
 
 namespace MarcReichel\ExposedPassword\Tests\Unit;
 
+use GuzzleHttp\Client;
 use MarcReichel\ExposedPassword\NotExposed;
 use MarcReichel\ExposedPassword\Tests\TestCase;
 
 class ExposedPasswordTest extends TestCase
 {
-    /** @var \GuzzleHttp\Client $client */
+    /** @var Client $client */
     private $client;
 
-    /** @var \MarcReichel\ExposedPassword\NotExposed $notExposed */
+    /** @var NotExposed $notExposed */
     private $notExposed;
 
     /**
@@ -26,24 +27,24 @@ class ExposedPasswordTest extends TestCase
         $this->client = null;
     }
 
-    public function testMessageIsReturned()
+    public function testMessageIsReturned(): void
     {
         $message = $this->notExposed->message();
-        $this->assertEquals('The :attribute has been exposed in a data breach.',
+        self::assertEquals('The :attribute has been exposed in a data breach.',
             $message);
     }
 
-    public function testValidationFails()
+    public function testValidationFails(): void
     {
         $password = 'password';
         $passed = $this->notExposed->passes('password', $password);
-        $this->assertFalse($passed);
+        self::assertFalse($passed);
     }
 
-    public function testValidationPasses()
+    public function testValidationPasses(): void
     {
-        $password = uniqid();
+        $password = uniqid('', true);
         $passed = $this->notExposed->passes('password', $password);
-        $this->assertTrue($passed);
+        self::assertTrue($passed);
     }
 }

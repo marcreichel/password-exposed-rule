@@ -4,7 +4,7 @@
   "type": "library",
   "keywords": [ "laravel", "validation", "password", "security" ],
   "require": {
-    "illuminate/contracts": "^5.5|^6.0",
+    "illuminate/contracts": "^5.5|^6.0|^7.0|^8.0",
     "guzzlehttp/guzzle": "^6.4"
   },
   "require-dev": {
