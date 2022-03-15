@@ -1,4 +1,4 @@
-> Package development abandoned due to [official support for uncompromised passwords](https://laravel.com/docs/8.x/validation#validating-passwords).
+> Package development abandoned due to [official support for uncompromised passwords](https://laravel.com/docs/validation#validating-passwords).
 
 # Laravel Password Exposed Rule
 Laravel Validation rule to check that a password hasn't been exposed
